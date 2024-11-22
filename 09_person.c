@@ -39,6 +39,7 @@ int main(void)
 	// 구조체 변수
 	PERSON		temp;
 
+	// 한 학생의 정보 입력
 	printf("아 이 디: ");
 	gets_s(temp.ID, sizeof(temp.ID));		// gets(temp.ID);
 
@@ -65,6 +66,8 @@ int main(void)
 
 	printf("주    소: ");
 	gets_s(temp.Addr, sizeof(temp.Addr));		// gets(temp.Addr);
+
+	// 입력된 한 학생의 정보 출력
 	printf("\n##### 회원 정보 ##### \n\n");
 	printf("아 이 디: %s \n", temp.ID);
 	printf("패스워드: %s \n", temp.PASS);
