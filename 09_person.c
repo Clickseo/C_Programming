@@ -16,22 +16,22 @@
 
 // 비트 필드 구조체 형식 정의
 typedef  struct _bitFieldDATE {
-	unsigned int  year : 16;	// 0 ~ 9999
-	unsigned int  month : 4;	// 1 ~ 12
-	unsigned int  day : 5;		// 1 ~ 31
-	unsigned int : 7;			// Reserved	// Padding Bits
+	unsigned int  year: 16;		// 0 ~ 9999
+	unsigned int  month: 4;		// 1 ~ 12
+	unsigned int  day: 5;		// 1 ~ 31
+	unsigned int : 7;		// Reserved	// Padding Bits
 } bitFieldDATE;
 
 // 구조체 설계: PERSON(struct  _person)
 typedef	 struct _person {
 	// int		Birthday[12];	// 생년월일: 8자리(20001231)
 	bitFieldDATE	Birthday;	// 생년월일
-	char		Gender[8];		// 성별: 남자, 여자
-	char		Name[12];		// 이름: 홍길동, 을지문덕
-	char		ID[16];			// 계정
-	char		PASS[16];		// 비밀번호
-	char		Tel[16];		// 연락처: 010-1009-1004
-	char		Addr[80];		// 주소
+	char		Gender[8];	// 성별: 남자, 여자
+	char		Name[12];	// 이름: 홍길동, 을지문덕
+	char		ID[16];		// 계정
+	char		PASS[16];	// 비밀번호
+	char		Tel[16];	// 연락처: 010-1009-1004
+	char		Addr[80];	// 주소
 } PERSON;
 
 int main(void)
@@ -40,7 +40,7 @@ int main(void)
 	PERSON		temp;
 
 	printf("아 이 디: ");
-	gets_s(temp.ID, sizeof(temp.ID));			// gets(temp.ID);
+	gets_s(temp.ID, sizeof(temp.ID));		// gets(temp.ID);
 
 	printf("비밀번호: ");
 	gets_s(temp.PASS, sizeof(temp.PASS));		// gets(temp.Name);
@@ -61,7 +61,7 @@ int main(void)
 	temp.Birthday.day = day;
 
 	printf("연 락 처: ");
-	gets_s(temp.Tel, sizeof(temp.Tel));			// gets(temp.Tel);
+	gets_s(temp.Tel, sizeof(temp.Tel));		// gets(temp.Tel);
 
 	printf("주    소: ");
 	gets_s(temp.Addr, sizeof(temp.Addr));		// gets(temp.Addr);
