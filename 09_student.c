@@ -60,7 +60,7 @@ int main(void)
 
 	// 학생 정보와 성적 입출력
 	input(arr, arrMAXSIZE);		// p[i]	// 첨자 연산
-	output(arr, arrMAXSIZE);		// p->	// 포인터 연산
+	output(arr, arrMAXSIZE);	// p->	// 포인터 연산
 
 	return 0;
 }
@@ -82,7 +82,7 @@ void	input(STUDENT* p, int num) {
 		gets_s(p[i].info.Gender, sizeof(p[i].info.Gender));
 		// gets(pStudent[i].info.Gender);
 
-				// 비트 필드 구조체 멤버에 데이터 저장
+		// 비트 필드 구조체 멤버에 데이터 저장
 		int	year, month, day;
 		printf("생년월일(예: 2000 12 31) : ");
 		scanf_s("%d %d %d%*c", &year, &month, &day);
@@ -106,7 +106,7 @@ void	input(STUDENT* p, int num) {
 		scanf_s("%d", &p[i].score.eng);		// scanf("%d", &p[i].score.koreng);
 
 		printf("수학 점수: ");
-		scanf_s("%d%*c", &p[i].score.math);		// scanf("%d", &p[i].score.kormath);
+		scanf_s("%d%*c", &p[i].score.math);	// scanf("%d", &p[i].score.kormath);
 
 		p[i].score.tot = p[i].score.kor + p[i].score.eng + p[i].score.math;
 		p[i].score.ave = (float)p[i].score.tot / 3;
