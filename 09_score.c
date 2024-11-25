@@ -9,7 +9,7 @@ typedef  struct  _score {
 
 // 함수 원형 선언
 void	input(SCORE* pScore);
-void	print(SCORE* pScore);
+void	output(SCORE* pScore);
 
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
 
 	// 학생 정보 입출력
 	input(&s);
-	print(&s);
+	output(&s);
 
 	return 0;
 }
@@ -38,7 +38,7 @@ void	input(SCORE* pS) {
 }
 
 // 한 명의 학생 정보 출력
-void	print(SCORE* pS) {
+void	output(SCORE* pS) {
 	printf("\n\t ### 입력 정보 ### \n\n");
 	printf("%10s %3d %3d %3d %5d %8.2f \n",
 		pS->name, pS->kor, pS->eng, pS->math, pS->tot, pS->ave);
