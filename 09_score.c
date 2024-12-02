@@ -1,6 +1,12 @@
+/*
+	학생 적 처리: 구조체 변수
+		파일명: score.c
+			구조체: SCORE
+*/
+
 #include <stdio.h>
 
-// 구조체 설계: SCORE(struct  _score)
+// 구조체 설계: SCORE(struct _score)
 typedef struct _score {
 	char	name[12];
 	int	kor, eng, math, tot;
