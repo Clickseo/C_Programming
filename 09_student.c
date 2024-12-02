@@ -25,7 +25,7 @@ typedef  struct _bitFieldDATE {
 	unsigned int : 7;		// Reserved	// Padding Bits
 } bitFieldDATE;
 
-// 구조체 설계: PERSON(struct  _person)
+// 구조체 설계: PERSON(struct _person)
 typedef	 struct _person {
 	// int		Birthday[12];	// 생년월일: 8자리(20001231)
 	bitFieldDATE	Birthday;	// 생년월일
@@ -37,7 +37,7 @@ typedef	 struct _person {
 	char		Addr[80];	// 주소
 } PERSON;
 
-// 구조체 설계: SCORE(struct  _score)
+// 구조체 설계: SCORE(struct _score)
 typedef struct _score {
 	int	kor, eng, math, tot;
 	float	ave;
@@ -50,8 +50,8 @@ typedef struct _student {
 } STUDENT;
 
 // 함수 원형 선언
-void	input(STUDENT* pStudent, int num);
-void	output(STUDENT* pStudent, int num);
+void	input(STUDENT *pStudent, int num);
+void	output(STUDENT *pStudent, int num);
 
 int main(void)
 {
@@ -66,12 +66,12 @@ int main(void)
 }
 
 // 학생 정보와 성적 점수 입력
-void	input(STUDENT* p, int num) {
+void	input(STUDENT *p, int num) {
 	for (int i = 0; i < num; ++i) {
 		printf("\n%d번째 학생 정보를 입력하세요.\n", i + 1);
 		printf("아 이 디: ");
 		gets_s(p[i].info.ID, sizeof(p[i].info.ID));	// gets(pStudent[i].info.ID);
-
+		
 		printf("비밀번호: ");
 		gets_s(p[i].info.PASS, sizeof(p[i].info.PASS)); // gets(pStudent[i].info.Name);
 
@@ -114,7 +114,7 @@ void	input(STUDENT* p, int num) {
 }
 
 // 학생 정보와 성적 점수 출력
-void	output(STUDENT* p, int num) {
+void	output(STUDENT *p, int num) {
 	for (int i = 0; i < num; ++i, ++p) {
 		printf("\n##### 학생 정보와 성적 점수 결과 ##### \n");
 		printf("아 이 디: %-10s / 패스워드: %-10s\n", p->info.ID, p->info.PASS);
