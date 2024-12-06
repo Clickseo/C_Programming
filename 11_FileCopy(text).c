@@ -1,3 +1,9 @@
+/*
+	파일 복사: 텍스트 파일
+		파일명: FileCopy(text).c
+			파일명: data.txt >> copy.txt
+*/
+
 #include <stdio.h>
 #include <stdlib.h>		// exit
 int main(void)
