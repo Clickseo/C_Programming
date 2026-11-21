@@ -1,3 +1,4 @@
+// 최댓값 구하기
 #include <stdio.h>
 #include <stdlib.h>                                  // __max, __min
 // #define  __max(a,  b)  (((a) > (b)) ? (a) : (b))  // 매크로 함수
