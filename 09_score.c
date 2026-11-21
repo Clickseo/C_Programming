@@ -9,13 +9,13 @@
 // 구조체 설계: SCORE(struct _score)
 typedef struct _score {
 	char	name[12];
-	int	kor, eng, math, tot;
+	int		kor, eng, math, tot;
 	float	ave;
 } SCORE;
 
 // 함수 원형 선언
 void	input(SCORE *pScore);
-void	output(SCORE *pScore);
+void	print(SCORE *pScore);
 
 int main(void)
 {
@@ -24,7 +24,7 @@ int main(void)
 
 	// 학생 정보 입출력
 	input(&s);
-	output(&s);
+	print(&s);
 
 	return 0;
 }
@@ -42,7 +42,7 @@ void	input(SCORE *p) {
 }
 
 // 한 명의 학생 정보 출력
-void	output(SCORE *p) {
+void	print(SCORE *p) {
 	printf("\n\t ### 입력 정보 ### \n\n");
 	printf("%10s %3d %3d %3d %5d %8.2f \n",
 		p->name, p->kor, p->eng, p->math, p->tot, p->ave);
